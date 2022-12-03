@@ -1,0 +1,14 @@
+prefix=../ffmpeg-android/armv8-a
+exec_prefix=${prefix}
+libdir=../ffmpeg-android/armv8-a/lib
+includedir=../ffmpeg-android/armv8-a/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 8.50.101
+Requires: 
+Requires.private: libswscale >= 6.8.112, libavformat >= 59.34.102, libavcodec >= 59.54.100, libswresample >= 4.9.100, libavutil >= 57.43.100
+Conflicts:
+Libs: -L${libdir}  -lavfilter 
+Libs.private: -pthread -lm -latomic
+Cflags: -I${includedir}

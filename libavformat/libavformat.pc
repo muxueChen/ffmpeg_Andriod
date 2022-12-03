@@ -1,0 +1,14 @@
+prefix=../ffmpeg-android/armv8-a
+exec_prefix=${prefix}
+libdir=../ffmpeg-android/armv8-a/lib
+includedir=../ffmpeg-android/armv8-a/include
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 59.34.102
+Requires: 
+Requires.private: libavcodec >= 59.54.100, libavutil >= 57.43.100
+Conflicts:
+Libs: -L${libdir}  -lavformat 
+Libs.private: -lm -latomic -lz
+Cflags: -I${includedir}
